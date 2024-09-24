@@ -25,6 +25,8 @@ def test_get_assignments_teacher_2(client, h_teacher_2):
         assert assignment['state'] in ['SUBMITTED', 'GRADED']
 
 
+
+
 def test_grade_assignment_cross(client, h_teacher_2):
     """
     failure case: assignment 1 was submitted to teacher 1 and not teacher 2

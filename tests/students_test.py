@@ -22,6 +22,10 @@ def test_get_assignments_student_2(client, h_student_2):
     data = response.json['data']
     for assignment in data:
         assert assignment['student_id'] == 2
+        assert assignment['content'] is not None
+        assert assignment["id"] is not None
+        assert assignment["state"] is not None
+        assert assignment["teacher_id"] is not None
 
 
 def test_post_assignment_null_content(client, h_student_1):
